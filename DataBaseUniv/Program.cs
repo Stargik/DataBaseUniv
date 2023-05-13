@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace DataBaseUniv
 {
     public class Program
@@ -8,6 +10,12 @@ namespace DataBaseUniv
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<DataBaseUniv2Context>(options => options.UseSqlServer(
+                builder.Configuration.GetConnectionString("DefaultConnection")
+                ));
+
+            builder.Services.Configure<SqlQueriesSettings>(builder.Configuration.GetSection("SqlQueriesSettings"));
 
             var app = builder.Build();
 

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DataBaseUniv.ViewModels.SimpleQueryResultModel3>
+@{
+    ViewData["Title"] = "Запит з множинним порівнянням 2";
+}
+
+<h1>Запит з множинним порівнянням 2</h1>
+
+<p>
+    <a asp-action="Index">Повернутися назад</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Classroom
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Classroom
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

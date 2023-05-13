@@ -1,0 +1,116 @@
+﻿@model DataBaseUniv.ViewModels.QuerySearchModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Запити</h1>
+<hr />
+<h2>Прості запити</h2>
+<div class="row">
+    <div class="col-md-12 p-2">
+        <form asp-action="SimpleQuery1" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span>Викладачі, що проводять більше </span>
+                <input asp-for="CourceCount" class="" style="display: inline-block;" />
+                <span>курсів.</span>
+                <span asp-validation-for="CourceCount" class="text-danger"></span>
+                <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 p-2">
+        <form asp-action="SimpleQuery2" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span>Курси, що мають рівень складності </span>
+                <input asp-for="LevelStatus" class="">
+                <span asp-validation-for="LevelStatus" class="text-danger"></span>
+                <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 p-2">
+        <form asp-action="SimpleQuery3" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span>Номери аудиторій, в яких читаються курси, в яких загальна кількість завдань не перевищує </span>
+                <input asp-for="TaskCount" class="">
+                <span asp-validation-for="TaskCount" class="text-danger"></span>
+                <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 p-2">
+        <form asp-action="SimpleQuery4" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span>Курси, які проводяться викладачами, які проводять рівно </span>
+                <input asp-for="CourceCount" class="" style="display: inline-block;" />
+                <span>курсів.</span>
+                <span asp-validation-for="CourceCount" class="text-danger"></span>
+                <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 p-2">
+        <form asp-action="SimpleQuery5" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span>Завдання курсів, які проводить викладач, який має електронну пошту </span>
+                <input asp-for="Email" class="">
+                <span asp-validation-for="Email" class="text-danger"></span>
+                <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+<h2>Запити з множинним порівнянням</h2>
+<div class="row">
+    <div class="col-md-12 p-2">
+        <form asp-action="SetQuery6" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span>Викладачі, які читають принаймні ті курси, що й викладач з поштою </span>
+                <input asp-for="Email" class="">
+                <span asp-validation-for="Email" class="text-danger"></span>
+                <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 p-2">
+        <form asp-action="SetQuery7" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span>Аудиторії, в яких проводяться всі ті і тільки ті курси, які мають рівень складності </span>
+                <input asp-for="LevelStatus" class="">
+                <span asp-validation-for="LevelStatus" class="text-danger"></span>
+                <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 p-2">
+        <form asp-action="SetQuery8" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <span>Викладачі, які читають принаймні всі курси, в яких загальна кількість завдань не менше </span>
+                <input asp-for="TaskCount" class="">
+                <span asp-validation-for="TaskCount" class="text-danger"></span>
+                <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
+            </div>
+        </form>
+    </div>
+</div>
