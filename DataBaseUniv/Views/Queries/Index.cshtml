@@ -12,7 +12,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span>Викладачі, що проводять більше </span>
-                <input asp-for="CourceCount" class="" style="display: inline-block;" />
+                <input required asp-for="CourceCount" class="" style="display: inline-block;" />
                 <span>курсів.</span>
                 <span asp-validation-for="CourceCount" class="text-danger"></span>
                 <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
@@ -26,7 +26,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span>Курси, що мають рівень складності </span>
-                <input asp-for="LevelStatus" class="">
+                <input required asp-for="LevelStatus" class="">
                 <span asp-validation-for="LevelStatus" class="text-danger"></span>
                 <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
             </div>
@@ -39,7 +39,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span>Номери аудиторій, в яких читаються курси, в яких загальна кількість завдань не перевищує </span>
-                <input asp-for="TaskCount" class="">
+                <input required asp-for="TaskCount" class="">
                 <span asp-validation-for="TaskCount" class="text-danger"></span>
                 <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
             </div>
@@ -52,7 +52,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span>Курси, які проводяться викладачами, які проводять рівно </span>
-                <input asp-for="CourceCount" class="" style="display: inline-block;" />
+                <input required asp-for="CourceCount" class="" style="display: inline-block;" />
                 <span>курсів.</span>
                 <span asp-validation-for="CourceCount" class="text-danger"></span>
                 <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
@@ -66,7 +66,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span>Завдання курсів, які проводить викладач, який має електронну пошту </span>
-                <input asp-for="Email" class="">
+                <input required asp-for="Email" class="">
                 <span asp-validation-for="Email" class="text-danger"></span>
                 <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
             </div>
@@ -81,7 +81,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span>Викладачі, які читають принаймні ті курси, що й викладач з поштою </span>
-                <input asp-for="Email" class="">
+                <input required asp-for="Email" class="">
                 <span asp-validation-for="Email" class="text-danger"></span>
                 <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
             </div>
@@ -94,7 +94,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span>Аудиторії, в яких проводяться всі ті і тільки ті курси, які мають рівень складності </span>
-                <input asp-for="LevelStatus" class="">
+                <input required asp-for="LevelStatus" class="">
                 <span asp-validation-for="LevelStatus" class="text-danger"></span>
                 <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
             </div>
@@ -107,7 +107,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <span>Викладачі, які читають принаймні всі курси, в яких загальна кількість завдань не менше </span>
-                <input asp-for="TaskCount" class="">
+                <input required asp-for="TaskCount" class="">
                 <span asp-validation-for="TaskCount" class="text-danger"></span>
                 <input type="submit" value="Знайти" class="btn btn-primary btn-sm" style="display: inline-block;" />
             </div>
